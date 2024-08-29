@@ -50,30 +50,15 @@
   <div class="flex flex-col md:flex-row mx-auto mt-2 h-auto lg:h-40 w-11/12 lg:w-11/12 xl:w-10/12"> 
     
     <!-- Photo -->
-    <div class="w-full mb-5 lg:mr-6 md:w-1/4">
-      <img 
-      src="https://ik.imagekit.io/lgpq0vloy/Cosmic%20Collsions/Coz_Logo_Draft_2%20(2).png?updatedAt=1721968909845" 
-      class="w-full my-4" 
-      alt="Cosmic Collisions Logo"
-      >
+    <div class="w-full h-60 bg-blue-300 mb-5 lg:mr-6 md:w-1/4">
+      
     </div>
     
     <!-- Text and Link -->
     <div class="w-full md:w-3/4">
       <p class="md:text-sm lg:text-lg sm:w-1/2 lg:w-3/4">
-        <span class="block">
-            <br>                            
-            <ion-icon class="text-2xl relative top-0.5 text-[var(--green)] md:text-[var(--green)]" name="logo-apple"></ion-icon>
-            <ion-icon class="text-2xl relative top-0.5 text-[var(--green)] md:text-[var(--green)]" name="logo-android"></ion-icon>
-            <span class="text-sm text-[#dd0000] font-bold ml-2">Demo Release -  Fall 2024</span>
-        </span>
-        <br class="md:hidden">
-        Get ready to shoot some aliens and asteroids in space, in an AR environment!
-        Inspired by classics like <b>Galaga</b> and <b>Space Invaders</b>, we aim to add another dimension 
-        - and story - to the traditional space shooter. Join our heroes from the SSDF (Solar System Defense Force), as they protect the Earth, the Sun, and their neighbors from an oncoming enemy attack.
-        <br>
-        <br>
-    </p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi pariatur esse dignissimos. Esse quibusdam quo, vel repudiandae dignissimos necessitatibus sint voluptatem suscipit debitis neque voluptatum, soluta praesentium ex, quia ullam!
+      </p>
     <Button color="none" class="text-white text-md mt-2 w-full lg:w-40" style="background: var(--green-gradient);">Tester Sign Up</Button>
     </div>
 

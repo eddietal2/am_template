@@ -6,7 +6,7 @@
 
   // Navbar Link Classes
   const nonActiveNavLink = 'text-[#999] text-xl lg:text-lg  my-1 duration-100 raleway';
-  const activeNavLink = 'text-[#000] text-xl lg:text-lg lg:bg-transparent my-1 font-bold duration-100 raleway-700';
+  const activeNavLink = 'text-[#dd0000] text-xl lg:text-lg lg:bg-transparent my-1 font-bold duration-100 raleway-700';
 
   // Should hide Navbar on mobile when a link is clicked
   let hideNavMenu = true;
@@ -25,12 +25,14 @@
 <main>
   <Navbar let:toggle class="fixed w-full top-0 z-50 backdrop-blur-lg bg-[#fff]/80 shadow-md" color="none">
       <NavBrand href="/">
-        <img 
-          src="https://ik.imagekit.io/lgpq0vloy/logos/F_Logo.svg?updatedAt=1721187101575" 
+        <!-- <img 
+          src="" 
           class="h-9 sm:h-12" 
-          alt="Final Boss Studios Logo" />
+          alt="" /> -->
+
+        <p class="font-bold text-3xl">Logo</p>
       </NavBrand>
-      <NavHamburger menuClass={'text-white'} onClick={() => onNavHamburgerClick()}  />
+      <NavHamburger menuClass={'text-black'} onClick={() => onNavHamburgerClick()}  />
       <NavUl {activeUrl} hidden={hideNavMenu}
         on:click={() => onNavLinkClick()}>
         <NavLi href="/" active={true} activeClass={activeNavLink} nonActiveClass={nonActiveNavLink}>HOME</NavLi>
