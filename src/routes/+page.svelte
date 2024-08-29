@@ -10,12 +10,48 @@
       return;
     })
 </script>
-<main style="">
-    <!-- Info -->
-    <div id="info" class="mx-auto p-5 rounded h-auto justify-center md:shadow-4xl w-11/12 md:w-5/6 lg:w-1/2 md:bg-[#FFFFFF05]">
-        <h1>Home</h1>
-    </div>
-</main>
+<main>
+
+    <section class="bg-gray-100 py-12"> 
+      <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-bold mb-4">Welcome to [Your Pet Store Name]!</h1>
+        <p class="text-lg">Find everything your furry friend needs to live a happy, healthy life.</p>
+        </div>
+    </section>
+  
+    <section class="bg-gray-200 container mx-auto py-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">Shop by Category</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-lg shadow p-4">
+          <h3 class="text-xl font-semibold mb-2">Dogs</h3>
+          <ul>
+            <li>Food</li>
+            <li>Toys</li>
+            <li>Accessories</li>
+            <li>Health</li>
+          </ul>
+        </div>
+        </div>
+    </section>
+  
+    <section class="bg-gray-300 container mx-auto py-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">Featured Products</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        </div>
+    </section>
+  
+    <section class="bg-gray-400 container mx-auto py-8">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">From Our Blog</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </div>
+        <div class="mt-6">
+          <a href="/blog" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Read More</a>
+        </div>
+      </div>
+    </section>
+  
+  </main>
 <style>
     #logo {
         opacity: 0;

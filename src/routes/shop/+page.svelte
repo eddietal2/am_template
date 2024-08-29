@@ -43,7 +43,7 @@
 <main>
   <!-- Header -->
   <div class="mx-auto w-11/12 lg:w-11/12 xl:w-10/12">
-    <h1 class="jersey-font page-header">COSMIC COLLISIONS</h1>
+    <h1 class="jersey-font page-header">SHOP</h1>
   </div>
 
   <!-- Content -->

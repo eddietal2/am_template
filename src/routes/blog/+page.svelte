@@ -10,7 +10,7 @@
 <main>
   <!-- Header -->
   <div class="mx-auto w-11/12 lg:w-11/12 xl:w-10/12">
-    <h1 class="jersey-font page-header">EDUCATION</h1>
+    <h1 class="jersey-font page-header">BLOG</h1>
   </div>
   
   <!-- Content -->
