@@ -16,18 +16,11 @@
 </script>
 <main>
 
-  <!-- Header -->
-  <div class="mx-auto w-11/12 lg:w-11/12 xl:w-10/12">
-    <h1 class="jersey-font page-header">ABOUT US</h1>
-    <p class="sm:w-1/2 lg:w-1/2">Introducing the Final Boss team.</p>
-  </div>
-
-  <!-- Founders -->
-  <div class="mx-auto my-4 w-11/12 lg:w-11/12 xl:w-10/12">
-    <h1 class="mb-2 mt-8 jersey-font text-2xl">Founders</h1>
+  <div class="mx-auto container">
+    <h1 class="mb-2 mt-8 jersey-font text-5xl">The Team</h1>
     <div class="flex flex-wrap justify-start gap-2">
       {#each founders as founder}
-        <div class="w-full rounded sm:w-1/2 lg:w-1/4 p-4 backdrop-blur-lg bg-white/10 border-white/20 border-2 text-white">
+        <div class="w-full rounded sm:w-1/2 lg:w-1/4 backdrop-blur-lg bg-white/10 border-white/20 border-2 text-white">
           <img 
             src={founder.photo} 
             class="h-auto rounded mb-2" 
