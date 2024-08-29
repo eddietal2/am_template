@@ -6,7 +6,7 @@
 
   // Navbar Link Classes
   const nonActiveNavLink = 'text-[#999] text-xl lg:text-lg  my-1 duration-100 raleway';
-  const activeNavLink = 'text-[#dd0000] text-xl lg:text-lg lg:bg-transparent my-1 font-bold duration-100 raleway-700';
+  const activeNavLink = 'text-[#222] text-xl lg:text-lg lg:bg-transparent my-1 font-bold duration-100 raleway-700';
 
   // Should hide Navbar on mobile when a link is clicked
   let hideNavMenu = true;

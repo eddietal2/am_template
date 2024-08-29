@@ -14,13 +14,22 @@
   <!-- Hero Section -->
   <section 
     class="bg-white p-2"> 
-    <h1 class="text-5xl font-bold">Welcome to Pet Care Direct!</h1>
-    <p class="text-lg">Find everything your furry friend needs to live a happy, healthy life.</p>
-    <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="" srcset="">
+    <div class="container mx-auto">
+    </div>
+    <div class="flex flex-col lg:flex-row flex-wrap"> 
+      <div class="lg:w-1/2 p-4">
+        <h1 class="text-5xl font-bold">Welcome to Pet Care Direct!</h1>
+        <p class="text-lg">Find everything your furry friend needs to live a happy, healthy life.</p>
+        <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="" srcset=""></div>
+      
+        <div class="lg:w-1/2 p-4 bg-gray-200">
+          <p>Call to Action</p>
+        </div>
+    </div>
   </section>
   
   <!-- Categories -->
-  <section class="bg-gray-201 container mx-auto py-8 mt-16">
+  <section class="bg-gray-201 container mx-auto px-2 py-8 mt-16">
       <h2 class="text-5xl font-bold mb-6">Shop by Category</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="bg-white text-center rounded-lg shadow p-4">
@@ -39,7 +48,7 @@
   </section>
 
   <!-- Products -->
-  <section class="bg-gray-301 container mx-auto py-8 mt-16">
+  <section class="bg-gray-301 container mx-auto px-2 py-8 mt-16">
       <h2 class="text-5xl font-bold mb-6">Featured Products</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
@@ -86,7 +95,7 @@
   </section>
 
   <!-- Blogs -->
-  <section class="bg-gray-401 container mx-auto py-8 mt-16">
+  <section class="bg-gray-401 container mx-auto px-2 py-8 mt-16">
     <h2 class="text-5xl font-bold mb-6">Featured Blogs</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
