@@ -14,7 +14,7 @@
   <!-- Hero Section -->
   <section 
     class="bg-white p-2"> 
-    <h1 class="text-2xl font-bold">Welcome to Pet Care Direct!</h1>
+    <h1 class="text-5xl font-bold">Welcome to Pet Care Direct!</h1>
     <p class="text-lg">Find everything your furry friend needs to live a happy, healthy life.</p>
     <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="" srcset="">
   </section>
