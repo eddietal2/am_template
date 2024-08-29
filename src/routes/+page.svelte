@@ -11,45 +11,202 @@
     })
 </script>
 <main>
-
-    <section class="bg-gray-100 py-12"> 
-      <div class="container mx-auto text-center">
-        <h1 class="text-4xl font-bold mb-4">Welcome to [Your Pet Store Name]!</h1>
-        <p class="text-lg">Find everything your furry friend needs to live a happy, healthy life.</p>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section 
+    class="bg-white p-2"> 
+    <h1 class="text-2xl font-bold">Welcome to Pet Care Direct!</h1>
+    <p class="text-lg">Find everything your furry friend needs to live a happy, healthy life.</p>
+    <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="" srcset="">
+  </section>
   
-    <section class="bg-gray-200 container mx-auto py-8">
-      <h2 class="text-3xl font-bold mb-6 text-center">Shop by Category</h2>
+  <!-- Categories -->
+  <section class="bg-gray-201 container mx-auto py-8 mt-16">
+      <h2 class="text-5xl font-bold mb-6">Shop by Category</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white rounded-lg shadow p-4">
-          <h3 class="text-xl font-semibold mb-2">Dogs</h3>
-          <ul>
-            <li>Food</li>
-            <li>Toys</li>
-            <li>Accessories</li>
-            <li>Health</li>
-          </ul>
+        <div class="bg-white text-center rounded-lg shadow p-4">
+          <h3 class="text-3xl font-semibold mb-2">Food</h3>
         </div>
+        <div class="bg-white text-center rounded-lg shadow p-4">
+          <h3 class="text-3xl font-semibold mb-2">Litter</h3>
         </div>
-    </section>
-  
-    <section class="bg-gray-300 container mx-auto py-8">
-      <h2 class="text-3xl font-bold mb-6 text-center">Featured Products</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white text-center rounded-lg shadow p-4">
+          <h3 class="text-3xl font-semibold mb-2">Clearning</h3>
         </div>
-    </section>
-  
-    <section class="bg-gray-400 container mx-auto py-8">
-      <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-6">From Our Blog</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          </div>
-        <div class="mt-6">
-          <a href="/blog" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Read More</a>
+        <div class="bg-white text-center rounded-lg shadow p-4">
+          <h3 class="text-3xl font-semibold mb-2">Accessories</h3>
         </div>
       </div>
-    </section>
+  </section>
+
+  <!-- Products -->
+  <section class="bg-gray-301 container mx-auto py-8 mt-16">
+      <h2 class="text-5xl font-bold mb-6">Featured Products</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Product Name</h3>
+            <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-blue-500">$Price</span>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                View Product
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Product Name</h3>
+            <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-blue-500">$Price</span>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                View Product
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Product Name</h3>
+            <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-blue-500">$Price</span>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                View Product
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Product Name</h3>
+            <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-blue-500">$Price</span>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                View Product
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Product Name</h3>
+            <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-blue-500">$Price</span>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                View Product
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+          <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Product Name</h3>
+            <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-blue-500">$Price</span>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                View Product
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Blogs -->
+  <section class="bg-gray-401 container mx-auto py-8 mt-16">
+    <h2 class="text-5xl font-bold mb-6">Featured Blogs</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Product Name</h3>
+          <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
+          <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-blue-500">$Price</span>
+            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              View Product
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Product Name</h3>
+          <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
+          <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-blue-500">$Price</span>
+            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              View Product
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Product Name</h3>
+          <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
+          <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-blue-500">$Price</span>
+            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              View Product
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Product Name</h3>
+          <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
+          <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-blue-500">$Price</span>
+            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              View Product
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Product Name</h3>
+          <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
+          <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-blue-500">$Price</span>
+            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              View Product
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Product Name</h3>
+          <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
+          <div class="flex items-center justify-between">
+            <span class="text-lg font-bold text-blue-500">$Price</span>
+            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              View Product
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   
   </main>
 <style>

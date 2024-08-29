@@ -43,7 +43,7 @@
       </NavUl>
   </Navbar>
 
-  <main class="min-h-screen py-20 lg:py-24" style="background: var(--bg-light-gray);">
+  <main class="min-h-screen py-16 lg:py-24" style="background: var(--bg-light-gray);">
     <slot></slot>
   </main>
 
