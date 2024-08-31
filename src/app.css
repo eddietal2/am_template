@@ -14,7 +14,7 @@
   --bg-light-gray: #F3F3F3;
 }
 .page-header {
-  font-size: 4em;
+  font-size: 3em;
   opacity: 0;
   animation: fade-in-hor 600ms ease forwards;
 }
@@ -51,26 +51,14 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* <uniquifier>: Use a unique and descriptive class name */
-/* <weight>: Use a value from 100 to 900 */
-
-.raleway {
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  text-decoration: uppercase;
-}
-.raleway-700 {
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  text-decoration: uppercase;
-}
 .jersey-font {
   font-family: "Jersey 10", sans-serif;
   font-weight: 400;
+  font-style: normal;
+}
+.lilita-one-regular {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -78,7 +66,7 @@
 /* Example usage: */
 h1, h2, h3, h4, h5 {
   color: #111;
-  font-family: "Jersey 10", sans-serif;
+  font-family: "Lilita One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }

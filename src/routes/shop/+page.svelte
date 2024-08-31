@@ -216,7 +216,7 @@
   <!-- Search & Categories -->
   <section>
     <div class="flex flex-col md:flex-row items-center mb-6">
-      <h1 class="jersey-font page-header w-full">SHOP</h1>
+      <h1 class="page-header w-full">SHOP</h1>
 
       <input 
         type="text" 

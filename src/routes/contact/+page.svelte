@@ -10,7 +10,7 @@
 <main>
   <!-- Header -->
   <div class="mx-auto container">
-    <h1 class="jersey-font page-header">CONTACT US</h1>
+    <h1 class="page-header">CONTACT US</h1>
     <p class="text-sm lg:text-xl sm:w-1/2 lg:w-1/2">Have a question? Have a comment? Want to work with, or invest in Final Boss? Please contact us: </p>
     <!-- Spacer -->
     <div class="h-4"></div>
