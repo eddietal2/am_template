@@ -17,7 +17,7 @@
 <main>
 
   <div class="mx-auto container">
-    <h1 class="mb-2 mt-8 jersey-font text-5xl">The Team</h1>
+    <h1 class="mb-2 mt-8 page-header">The Team</h1>
     <div class="flex flex-wrap justify-start gap-2">
       {#each founders as founder}
         <div class="w-full rounded sm:w-1/2 lg:w-1/4 backdrop-blur-lg bg-white/10 border-white/20 border-2 text-white">

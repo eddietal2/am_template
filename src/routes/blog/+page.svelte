@@ -1,4 +1,7 @@
 <script lang="ts">
+    import { goto } from "$app/navigation";
+    import { Button } from "flowbite-svelte";
+
   let searchTerm = '';
   let selectedCategory = 'all'; 
 
@@ -13,174 +16,103 @@
   // Placeholder for blog data
   let blogs = [
   {
-    name: 'Purrfect Play Mouse',
-    category: 'toys',
-    image: 'https://via.placeholder.com/300x200', 
-    price: 9.99,
-    description: 'A realistic mouse toy that will keep your cat entertained for hours.',
-    affiliateLink: 'https://www.example.com/purrfect-play-mouse' 
+    id: 1,
+    name: 'The Benefits of Catnip for Your Feline Friend',
+    category: 'cat behavior',
+    image: 'https://via.placeholder.com/300x200',
+    description: 'Explore the science behind catnip and how it can enrich your cat\'s life.',
+    link: 'https://www.example.com/benefits-of-catnip',
+    post: 'Catnip, also known as Nepeta cataria, is a plant that has a fascinating effect on most cats. It contains a chemical called nepetalactone, which triggers a euphoric response in felines. In this blog post, we\'ll delve into the science behind catnip\'s effects, explore its benefits for your cat\'s physical and mental well-being, and provide tips on how to use it safely and effectively.'
   },
   {
-    name: 'Salmon & Tuna Feast',
-    category: 'food',
+    id: 2,
+    name: 'Choosing the Right Cat Food: A Comprehensive Guide',
+    category: 'cat nutrition',
     image: 'https://via.placeholder.com/300x200',
-    price: 14.99,
-    description: 'A delicious and nutritious wet food for your feline friend.',
-    affiliateLink: 'https://www.example.com/salmon-tuna-feast'
+    description: 'Learn how to select the best food for your cat\'s age, breed, and lifestyle.',
+    link: 'https://www.example.com/choosing-cat-food',
+    post: 'With countless cat food options available, it can be overwhelming to choose the right one for your furry friend. This comprehensive guide will walk you through the key factors to consider, including your cat\'s age, breed, activity level, and any specific dietary needs. We\'ll also discuss the different types of cat food, such as dry, wet, and raw, and help you decipher ingredient labels to make informed decisions about your cat\'s nutrition.'
   },
   {
-    name: 'Cozy Cat Condo',
-    category: 'accessories',
+    id: 3,
+    name: 'Creating a Cat-Friendly Home: Tips and Tricks',
+    category: 'cat care',
     image: 'https://via.placeholder.com/300x200',
-    price: 49.99,
-    description: 'A multi-level cat condo with scratching posts and cozy hiding spots.',
-    affiliateLink: 'https://www.example.com/cozy-cat-condo'
+    description: 'Discover simple ways to make your home a haven for your feline companion.',
+    link: 'https://www.example.com/cat-friendly-home',
+    post: 'Cats are natural explorers and need a stimulating environment to thrive. In this blog post, we\'ll share practical tips and tricks for creating a cat-friendly home. From providing vertical space with cat trees and shelves to creating cozy hiding spots and enriching their playtime, you\'ll learn how to design a space that caters to your cat\'s instincts and needs.'
   },
   {
-    name: 'Hairball Remedy Paste',
-    category: 'health',
+    id: 4,
+    name: 'Understanding and Preventing Hairballs in Cats',
+    category: 'cat health',
     image: 'https://via.placeholder.com/300x200',
-    price: 7.99,
-    description: 'A tasty paste that helps prevent and eliminate hairballs.',
-    affiliateLink: 'https://www.example.com/hairball-remedy-paste'
+    description: 'Learn about the causes of hairballs and effective prevention strategies.',
+    link: 'https://www.example.com/preventing-hairballs',
+    post: 'Hairballs are a common problem for cats, but they can be uncomfortable and even lead to health issues if left unaddressed. This blog post will explain why cats get hairballs, discuss the signs and symptoms to watch for, and offer practical tips on how to prevent and manage hairballs, including grooming, diet, and lifestyle adjustments.'
   },
   {
-    name: 'Feather Wand Teaser',
-    category: 'toys',
+    id: 5,
+    name: 'Enriching Your Cat\'s Life with Playtime',
+    category: 'cat behavior',
     image: 'https://via.placeholder.com/300x200',
-    price: 5.99,
-    description: 'An interactive toy with colorful feathers to stimulate your cat\'s hunting instincts.',
-    affiliateLink: 'https://www.example.com/feather-wand-teaser'
+    description: 'Discover engaging games and activities to keep your cat entertained and happy.',
+    link: 'https://www.example.com/cat-playtime',
+    post: 'Playtime is essential for your cat\'s physical and mental well-being. It provides exercise, stimulates their natural instincts, and strengthens the bond between you and your feline friend. In this blog post, we\'ll explore a variety of fun and interactive games and activities that you can enjoy with your cat, from classic toys like feather wands and laser pointers to DIY creations and puzzle feeders.'
   },
   {
-    name: 'Chicken & Rice Dry Food',
-    category: 'food',
+    id: 6,
+    name: 'The Importance of Dental Care for Cats',
+    category: 'cat health',
     image: 'https://via.placeholder.com/300x200',
-    price: 29.99,
-    description: 'A high-quality dry food formulated for adult cats.',
-    affiliateLink: 'https://www.example.com/chicken-rice-dry-food'
+    description: 'Learn how to maintain your cat\'s oral hygiene and prevent dental problems.',
+    link: 'https://www.example.com/cat-dental-care',
+    post: 'Just like humans, cats need regular dental care to prevent plaque buildup, gum disease, and other oral health issues. This blog post will guide you through the basics of feline dental care, including brushing techniques, dental treats and toys, and signs of dental problems to watch for. We\'ll also discuss the importance of professional dental cleanings and how to make them a positive experience for your cat.'
   },
   {
-    name: 'Self-Cleaning Litter Box',
-    category: 'accessories',
+    id: 7,
+    name: 'Litter Box Training: A Step-by-Step Guide',
+    category: 'cat care',
     image: 'https://via.placeholder.com/300x200',
-    price: 129.99,
-    description: 'A convenient and hygienic litter box that automatically cleans itself.',
-    affiliateLink: 'https://www.example.com/self-cleaning-litter-box'
+    description: 'Master the art of litter box training for a clean and happy home.',
+    link: 'https://www.example.com/litter-box-training',
+    post: 'Litter box training is a crucial aspect of cat ownership, but it doesn\'t have to be a struggle. This step-by-step guide will provide you with proven techniques and tips for successfully litter box training your kitten or adult cat. We\'ll cover everything from choosing the right litter box and litter to troubleshooting common problems and ensuring a positive experience for both you and your cat.'
   },
   {
-    name: 'Flea & Tick Collar',
-    category: 'health',
+    id: 8,
+    name: 'Protecting Your Cat from Fleas and Ticks',
+    category: 'cat health',
     image: 'https://via.placeholder.com/300x200',
-    price: 19.99,
-    description: 'A long-lasting collar that protects your cat from fleas and ticks.',
-    affiliateLink: 'https://www.example.com/flea-tick-collar'
+    description: 'Effective strategies for preventing and treating fleas and ticks in cats.',
+    link: 'https://www.example.com/flea-tick-prevention',
+    post: 'Fleas and ticks can cause discomfort, skin irritation, and even transmit diseases to your cat. This blog post will provide you with a comprehensive overview of flea and tick prevention and treatment options. We\'ll discuss various products like spot-on treatments, oral medications, and collars, as well as natural alternatives. You\'ll also learn how to identify signs of infestation and take steps to protect your home and other pets.'
   },
   {
-    name: 'Laser Pointer Toy',
-    category: 'toys',
+    id: 9,
+    name: 'Decoding Your Cat\'s Body Language',
+    category: 'cat behavior',
     image: 'https://via.placeholder.com/300x200',
-    price: 12.99,
-    description: 'A fun and interactive laser pointer toy to keep your cat active.',
-    affiliateLink: 'https://www.example.com/laser-pointer-toy'
+    description: 'Learn to understand your cat\'s subtle cues and communication signals.',
+    link: 'https://www.example.com/cat-body-language',
+    post: 'Cats communicate through a complex language of body postures, vocalizations, and facial expressions. Understanding these signals can help you better connect with your cat, anticipate their needs, and strengthen your bond. In this blog post, we\'ll decode common cat body language cues, from tail positions and ear movements to purrs and meows, empowering you to become a fluent speaker of "cat."'
   },
   {
-    name: 'Tuna & Shrimp Gourmet Pâté',
-    category: 'food',
+    id: 10,
+    name: 'Homemade Cat Treats: Easy and Healthy Recipes',
+    category: 'cat nutrition',
     image: 'https://via.placeholder.com/300x200',
-    price: 3.49,
-    description: 'A gourmet wet food with a delectable blend of tuna and shrimp.',
-    affiliateLink: 'https://www.example.com/tuna-shrimp-pate'
+    description: 'Delight your cat with these simple and nutritious homemade treats.',
+    link: 'https://www.example.com/homemade-cat-treats',
+    post: 'Show your cat some love with these easy and healthy homemade treat recipes! These delicious snacks are made with wholesome ingredients and are sure to please even the pickiest feline palate. From savory tuna bites to crunchy chicken and rice cookies, you\'ll find a variety of options to spoil your cat while keeping their health in mind.'
   },
-  {
-    name: 'Ceramic Water Fountain',
-    category: 'accessories',
-    image: 'https://via.placeholder.com/300x200',
-    price: 24.99,
-    description: 'A stylish and hygienic water fountain to encourage your cat to drink more.',
-    affiliateLink: 'https://www.example.com/ceramic-water-fountain'
-  },
-  {
-    name: 'Dental Chew Treats',
-    category: 'health',
-    image: 'https://via.placeholder.com/300x200',
-    price: 6.99,
-    description: 'Tasty treats that help reduce plaque and tartar buildup.',
-    affiliateLink: 'https://www.example.com/dental-chew-treats'
-  },
-  {
-    name: 'Catnip-Filled Kick Stick',
-    category: 'toys',
-    image: 'https://via.placeholder.com/300x200',
-    price: 4.99,
-    description: 'A fun and stimulating kick stick filled with organic catnip.',
-    affiliateLink: 'https://www.example.com/catnip-kick-stick'
-  },
-  {
-    name: 'Indoor Cat Grass Kit',
-    category: 'food',
-    image: 'https://via.placeholder.com/300x200',
-    price: 8.99,
-    description: 'A kit for growing fresh, healthy grass for your indoor cat.',
-    affiliateLink: 'https://www.example.com/indoor-cat-grass-kit'
-  },
-  {
-    name: 'Window Perch with Suction Cups',
-    category: 'accessories',
-    image: 'https://via.placeholder.com/300x200',
-    price: 17.99,
-    description: 'A comfortable perch that attaches securely to any window.',
-    affiliateLink: 'https://www.example.com/window-perch'
-  },
-  {
-    name: 'Probiotic Supplements for Cats',
-    category: 'health',
-    image: 'https://via.placeholder.com/300x200',
-    price: 15.99,
-    description: 'Probiotic supplements to support digestive health and immunity.',
-    affiliateLink: 'https://www.example.com/probiotic-supplements'
-  },
-  {
-    name: 'Interactive Treat Puzzle',
-    category: 'toys',
-    image: 'https://via.placeholder.com/300x200',
-    price: 19.99,
-    description: 'A challenging puzzle that dispenses treats as your cat plays.',
-    affiliateLink: 'https://www.example.com/treat-puzzle'
-  },
-  {
-    name: 'Grain-Free Salmon Cat Food',
-    category: 'food',
-    image: 'https://via.placeholder.com/300x200',
-    price: 34.99,
-    description: 'A premium grain-free cat food with real salmon as the first ingredient.',
-    affiliateLink: 'https://www.example.com/grain-free-salmon-food'
-  },
-  {
-    name: 'Stylish Cat Carrier Backpack',
-    category: 'accessories',
-    image: 'https://via.placeholder.com/300x200',
-    price: 59.99,
-    description: 'A comfortable and fashionable backpack for carrying your cat.',
-    affiliateLink: 'https://www.example.com/cat-carrier-backpack'
-  },
-  {
-    name: 'Calming Cat Spray',
-    category: 'health',
-    image: 'https://via.placeholder.com/300x200',
-    price: 12.99,
-    description: 'A natural spray to help reduce stress and anxiety in cats.',
-    affiliateLink: 'https://www.example.com/calming-cat-spray'
-  },
-  {
-    name: 'Plush Fish Cat Toy',
-    category: 'toys',
-    image: 'https://via.placeholder.com/300x200',
-    price: 6.99,
-    description: 'A soft and cuddly fish toy filled with catnip.',
-    affiliateLink: 'https://www.example.com/plush-fish-toy'
+  ];
+
+  function viewBlog(blog: any) {
+    console.log(blog);
+    let slug = blog.id;
+    goto(`/blog/${slug}`)
+    return blog;
   }
-]
 
   // Pagination Logic
   let currentPage = 1;
@@ -216,7 +148,7 @@
   <!-- Search & Categories -->
   <section>
     <div class="flex flex-col md:flex-row items-center mb-6">
-      <h1 class="jersey-font page-header w-full">BLOG</h1>
+      <h1 class="page-header w-full">BLOG</h1>
 
       <input 
         type="text" 
@@ -246,10 +178,9 @@
             <h3 class="text-xl font-semibold mb-2">{blog.name}</h3>
             <p class="text-gray-600 mb-2">{blog.description}</p>
             <div class="flex items-center justify-between">
-              <span class="text-lg font-bold text-blue-500">${blog.price}</span>
-              <a href={blog.affiliateLink} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                View blog
-              </a>
+              <Button on:click={viewBlog(blog)} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                View Product
+              </Button>
             </div>
           </div>
         </div>
