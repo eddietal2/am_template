@@ -1,4 +1,7 @@
 <script lang="ts">
+    import { goto } from "$app/navigation";
+    import { Button } from "flowbite-svelte";
+
   let searchTerm = '';
   let selectedCategory = 'all'; 
 
@@ -13,14 +16,16 @@
   // Placeholder for product data
   let products = [
   {
+    id: 1,
     name: 'Purrfect Play Mouse',
     category: 'toys',
-    image: 'https://via.placeholder.com/300x200', 
+    image: 'https://via.placeholder.com/300x200',
     price: 9.99,
     description: 'A realistic mouse toy that will keep your cat entertained for hours.',
-    affiliateLink: 'https://www.example.com/purrfect-play-mouse' 
+    affiliateLink: 'https://www.example.com/purrfect-play-mouse'
   },
   {
+    id: 2,
     name: 'Salmon & Tuna Feast',
     category: 'food',
     image: 'https://via.placeholder.com/300x200',
@@ -29,6 +34,7 @@
     affiliateLink: 'https://www.example.com/salmon-tuna-feast'
   },
   {
+    id: 3,
     name: 'Cozy Cat Condo',
     category: 'accessories',
     image: 'https://via.placeholder.com/300x200',
@@ -37,6 +43,7 @@
     affiliateLink: 'https://www.example.com/cozy-cat-condo'
   },
   {
+    id: 4,
     name: 'Hairball Remedy Paste',
     category: 'health',
     image: 'https://via.placeholder.com/300x200',
@@ -45,6 +52,7 @@
     affiliateLink: 'https://www.example.com/hairball-remedy-paste'
   },
   {
+    id: 5,
     name: 'Feather Wand Teaser',
     category: 'toys',
     image: 'https://via.placeholder.com/300x200',
@@ -53,6 +61,7 @@
     affiliateLink: 'https://www.example.com/feather-wand-teaser'
   },
   {
+    id: 6,
     name: 'Chicken & Rice Dry Food',
     category: 'food',
     image: 'https://via.placeholder.com/300x200',
@@ -61,6 +70,7 @@
     affiliateLink: 'https://www.example.com/chicken-rice-dry-food'
   },
   {
+    id: 7,
     name: 'Self-Cleaning Litter Box',
     category: 'accessories',
     image: 'https://via.placeholder.com/300x200',
@@ -69,6 +79,7 @@
     affiliateLink: 'https://www.example.com/self-cleaning-litter-box'
   },
   {
+    id: 8,
     name: 'Flea & Tick Collar',
     category: 'health',
     image: 'https://via.placeholder.com/300x200',
@@ -77,6 +88,7 @@
     affiliateLink: 'https://www.example.com/flea-tick-collar'
   },
   {
+    id: 9,
     name: 'Laser Pointer Toy',
     category: 'toys',
     image: 'https://via.placeholder.com/300x200',
@@ -85,6 +97,7 @@
     affiliateLink: 'https://www.example.com/laser-pointer-toy'
   },
   {
+    id: 10,
     name: 'Tuna & Shrimp Gourmet Pâté',
     category: 'food',
     image: 'https://via.placeholder.com/300x200',
@@ -93,6 +106,7 @@
     affiliateLink: 'https://www.example.com/tuna-shrimp-pate'
   },
   {
+    id: 11,
     name: 'Ceramic Water Fountain',
     category: 'accessories',
     image: 'https://via.placeholder.com/300x200',
@@ -101,6 +115,7 @@
     affiliateLink: 'https://www.example.com/ceramic-water-fountain'
   },
   {
+    id: 12,
     name: 'Dental Chew Treats',
     category: 'health',
     image: 'https://via.placeholder.com/300x200',
@@ -109,6 +124,7 @@
     affiliateLink: 'https://www.example.com/dental-chew-treats'
   },
   {
+    id: 13,
     name: 'Catnip-Filled Kick Stick',
     category: 'toys',
     image: 'https://via.placeholder.com/300x200',
@@ -117,6 +133,7 @@
     affiliateLink: 'https://www.example.com/catnip-kick-stick'
   },
   {
+    id: 14,
     name: 'Indoor Cat Grass Kit',
     category: 'food',
     image: 'https://via.placeholder.com/300x200',
@@ -125,6 +142,7 @@
     affiliateLink: 'https://www.example.com/indoor-cat-grass-kit'
   },
   {
+    id: 15,
     name: 'Window Perch with Suction Cups',
     category: 'accessories',
     image: 'https://via.placeholder.com/300x200',
@@ -133,6 +151,7 @@
     affiliateLink: 'https://www.example.com/window-perch'
   },
   {
+    id: 16,
     name: 'Probiotic Supplements for Cats',
     category: 'health',
     image: 'https://via.placeholder.com/300x200',
@@ -141,6 +160,7 @@
     affiliateLink: 'https://www.example.com/probiotic-supplements'
   },
   {
+    id: 17,
     name: 'Interactive Treat Puzzle',
     category: 'toys',
     image: 'https://via.placeholder.com/300x200',
@@ -149,6 +169,7 @@
     affiliateLink: 'https://www.example.com/treat-puzzle'
   },
   {
+    id: 18,
     name: 'Grain-Free Salmon Cat Food',
     category: 'food',
     image: 'https://via.placeholder.com/300x200',
@@ -157,6 +178,7 @@
     affiliateLink: 'https://www.example.com/grain-free-salmon-food'
   },
   {
+    id: 19,
     name: 'Stylish Cat Carrier Backpack',
     category: 'accessories',
     image: 'https://via.placeholder.com/300x200',
@@ -165,22 +187,22 @@
     affiliateLink: 'https://www.example.com/cat-carrier-backpack'
   },
   {
+    id: 20,
     name: 'Calming Cat Spray',
     category: 'health',
     image: 'https://via.placeholder.com/300x200',
     price: 12.99,
     description: 'A natural spray to help reduce stress and anxiety in cats.',
     affiliateLink: 'https://www.example.com/calming-cat-spray'
-  },
-  {
-    name: 'Plush Fish Cat Toy',
-    category: 'toys',
-    image: 'https://via.placeholder.com/300x200',
-    price: 6.99,
-    description: 'A soft and cuddly fish toy filled with catnip.',
-    affiliateLink: 'https://www.example.com/plush-fish-toy'
   }
-]
+  ]
+
+  function viewProduct(product: any) {
+    console.log(product);
+    let slug = product.id;
+    goto(`/shop/${slug}`)
+    return product;
+  }
 
   // Pagination Logic
   let currentPage = 1;
@@ -211,7 +233,7 @@
 
 </script>
 
-<main class="container mx-auto py-8">
+<main class="container mx-auto py-8 px-2">
 
   <!-- Search & Categories -->
   <section>
@@ -247,9 +269,9 @@
             <p class="text-gray-600 mb-2">{product.description}</p>
             <div class="flex items-center justify-between">
               <span class="text-lg font-bold text-blue-500">${product.price}</span>
-              <a href={product.affiliateLink} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <Button on:click={viewProduct(product)} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 View Product
-              </a>
+              </Button>
             </div>
           </div>
         </div>
