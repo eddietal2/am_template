@@ -38,7 +38,6 @@
         <NavLi href="/" active={true} activeClass={activeNavLink} nonActiveClass={nonActiveNavLink}>HOME</NavLi>
         <NavLi href="/shop" active={true}  activeClass={activeNavLink} nonActiveClass={nonActiveNavLink}>SHOP</NavLi>
         <NavLi href="/blog" active={true}  activeClass={activeNavLink} nonActiveClass={nonActiveNavLink}>BLOG</NavLi>
-        <NavLi href="/about" active={true}  activeClass={activeNavLink} nonActiveClass={nonActiveNavLink}>ABOUT</NavLi>
         <NavLi href="/contact" active={true}  activeClass={activeNavLink} nonActiveClass={nonActiveNavLink}>CONTACT</NavLi>
       </NavUl>
   </Navbar>
