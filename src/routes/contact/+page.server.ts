@@ -1,7 +1,5 @@
 import { format } from 'date-fns';
 import nodemailer from 'nodemailer';
-import { onMount } from 'svelte';
-
 
 // TODO: DO Vite & PreRendering research
 export const prerender = false;
