@@ -1,14 +1,7 @@
 <script>
-    import { onMount } from 'svelte';
     import { goto } from '$app/navigation';
     import { Button } from 'flowbite-svelte';
-    function testerLink() {
-        window.open('https://forms.gle/SWN4pGnP4crNx78e7', '_blank');
-    }
 
-    onMount(() => {
-      return;
-    })
 </script>
 <main>
   <!-- Hero Section -->
@@ -69,9 +62,9 @@
             <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
             <div class="flex items-center justify-between">
               <span class="text-lg font-bold text-green-500">$25</span>
-              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <Button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 View Product
-              </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -82,9 +75,9 @@
             <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
             <div class="flex items-center justify-between">
               <span class="text-lg font-bold text-green-500">$25</span>
-              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <Button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 View Product
-              </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -95,13 +88,15 @@
             <p class="text-gray-600 mb-2">Brief product description highlighting key features and benefits</p>
             <div class="flex items-center justify-between">
               <span class="text-lg font-bold text-green-500">$25</span>
-              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <Button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 View Product
-              </a>
+              </Button>
             </div>
           </div>
         </div>
-        
+      </div>
+      <div class="text-center mt-16">
+        <Button on:click={()=> {goto('/shop')}} class="w-56 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View All Products</Button>
       </div>
   </section>
 
@@ -145,6 +140,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="text-center mt-16">
+      <Button on:click={()=> {goto('/blog')}} class="w-56 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View All Blogs</Button>
     </div>
   </section>
   
