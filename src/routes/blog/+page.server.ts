@@ -33,7 +33,7 @@ export const load: PageServerLoad = async ({ params }) => {
 
         console.clear();
         // console.log('formattedData:');
-        // console.log(formattedData);
+        console.log(formattedData);
 
         return {formattedData};
         

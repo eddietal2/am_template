@@ -10,15 +10,16 @@
 
   const categories = [
     { id: 'all', name: 'All' },
-    { id: 'food', name: 'Food' },
-    { id: 'toys', name: 'Toys' },
-    { id: 'accessories', name: 'Accessories' },
-    { id: 'health', name: 'Health' }
+    { id: 'Food', name: 'Food' },
+    { id: 'Toys', name: 'Toys' },
+    { id: 'Accessories', name: 'Accessories' },
+    { id: 'Health', name: 'Health' }
   ];
 
   // Get Blogs
   export let data: PageData;  
   let blogs = data.formattedData;
+  console.log('Blogs');
   updateBlogPosts(blogs)
 
   function viewBlog(blog: any) {
