@@ -13,7 +13,7 @@ import { GOOGLE_SHEETS_SPREADSHEET_ID, GOOGLE_SHEETS_CLIENT_EMAIL, GOOGLE_SHEETS
 
 // export const prerender = false;
 // export const csr = false;
-export const load: PageServerLoad = async ({fetch, }) => { 
+export const load: PageServerLoad = async ({fetch }) => { 
     // authenticate the service account
     const googleAuth = new google.auth.JWT(
         GOOGLE_SHEETS_CLIENT_EMAIL,
