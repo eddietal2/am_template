@@ -16,7 +16,7 @@
 
   // Get Blogs
   export let data: PageData;  
-  let blogs = data.formattedData;
+  let blogs = data.formattedBlogs;
 
   function viewBlog(blog: any) {
     let slug = blog.id;

@@ -118,7 +118,7 @@
     <!-- Toasts -->
     {#if successToast}
       <Toast 
-        position="top" 
+        position={"top-right"}
         divClass={successToastClass} 
         contentClass={'w-full text-lg lg:text-2xl font-normal'} 
         dismissable={true} 
@@ -129,10 +129,9 @@
     {/if}
     {#if errorToast}
       <Toast 
-        position="top" 
+        position={"top-right"}
         divClass={errorToastClass} 
         contentClass={'w-full text-lg lg:text-2xl font-normal'} 
-        transition={'fade'}
         dismissable={true} 
         align={true}>
           <span><CloseCircleOutline size="xl" color="#dd0000"></CloseCircleOutline></span>
