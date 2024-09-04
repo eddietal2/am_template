@@ -3,7 +3,6 @@
   import { Button } from "flowbite-svelte";
   import type { PageData } from './$types'
   import { blogPosts, updateBlogPosts } from "../../stores/blogStore";
-    
 
   let searchTerm = '';
   let selectedCategory = 'all'; 
@@ -91,6 +90,7 @@
         <p>There are no blogs. Please try again later</p>
       {/if}
       <!-- Blogs -->
+       <!-- Comment -->
       {#each displayedBlogs as blog}
         <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
           <img src={blog.image} alt={blog.title} class="w-full h-48 object-cover"> 
