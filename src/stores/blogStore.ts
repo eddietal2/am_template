@@ -1,5 +1,10 @@
 import { writable } from 'svelte/store';
 
+// If Google Sheets structure/columns has changed, update the following files:
+// - blog @ +page.server.ts
+// - blog[slug] @ +page.server.ts
+// - home +layout.server.ts
+
 export interface BlogPost {
     // Google Sheets correlating Columns
     // i.e Column 'A' is the Title for each blog

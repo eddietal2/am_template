@@ -2,7 +2,6 @@
   import { goto } from "$app/navigation";
   import { Button } from "flowbite-svelte";
   import type { PageData } from './$types'
-  import { blogPosts, updateBlogPosts } from "../../stores/blogStore";
 
   let searchTerm = '';
   let selectedCategory = 'all'; 
@@ -18,11 +17,8 @@
   // Get Blogs
   export let data: PageData;  
   let blogs = data.formattedData;
-  console.log('Blogs');
-  updateBlogPosts(blogs)
 
   function viewBlog(blog: any) {
-    console.log(blog);
     let slug = blog.id;
     goto(`/blog/${slug}`)
     return blog;

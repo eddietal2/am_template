@@ -1,7 +1,18 @@
-<script>
+<script lang="ts">
     import { goto } from '$app/navigation';
     import { Button } from 'flowbite-svelte';
+    import type { PageData } from './$types'
+    
+    export let data: PageData; 
+    console.log(data);
 
+    function viewBlog(blog: any) {
+      let slug = blog.id;
+      goto(`/blog/${slug}`)
+      return blog;
+    }
+
+    
 </script>
 <main>
   <!-- Hero Section -->
@@ -52,7 +63,7 @@
   </section>
 
   <!-- Products -->
-  <section class="bg-gray-301 container mx-auto px-2 py-8 mt-16">
+  <!-- <section class="bg-gray-301 container mx-auto px-2 py-8 mt-16">
       <h2 class="text-3xl font-bold mb-6">Featured Products</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
@@ -98,55 +109,34 @@
       <div class="text-center mt-16">
         <Button on:click={()=> {goto('/shop')}} class="w-56 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View All Products</Button>
       </div>
-  </section>
+  </section> -->
 
   <!-- Blogs -->
   <section class="bg-gray-401 container mx-auto px-2 py-8 mt-16">
     <h2 class="text-3xl font-bold mb-6">Featured Blogs</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
-        <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
+      <!-- svelte-ignore empty-block -->
+      {#each data.formattedData as blog}    
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src={blog.image} alt="Product Name" class="w-full h-48 object-cover"> 
         <div class="p-4">
-          <p class="text-xl mb-2 text-[#666] font-bold">Blog Name</p>
-          <p class="text-gray-600 mb-2">Brief blog description highlighting key features and benefits</p>
+          <p class="text-xl mb-2 text-[#666] font-bold">{blog.title}</p>
           <div class="flex items-center justify-between">
-            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <Button on:click={viewBlog(blog)} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               View Blog
-            </a>
+            </Button>
           </div>
         </div>
-      </div>
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
-        <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
-        <div class="p-4">
-          <p class="text-xl mb-2 text-[#666] font-bold">Blog Name</p>
-          <p class="text-gray-600 mb-2">Brief blog description highlighting key features and benefits</p>
-          <div class="flex items-center justify-between">
-            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              View Blog
-            </a>
-          </div>
         </div>
-      </div>
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
-        <img src="https://t3.ftcdn.net/jpg/04/81/85/46/360_F_481854656_gHGTnBscKXpFEgVTwAT4DL4NXXNhDKU9.jpg" alt="Product Name" class="w-full h-48 object-cover"> 
-        <div class="p-4">
-          <p class="text-xl mb-2 text-[#666] font-bold">Blog Name</p>
-          <p class="text-gray-600 mb-2">Brief blog description highlighting key features and benefits</p>
-          <div class="flex items-center justify-between">
-            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              View Blog
-            </a>
-          </div>
-        </div>
-      </div>
+      {/each}
+
     </div>
     <div class="text-center mt-16">
       <Button on:click={()=> {goto('/blog')}} class="w-56 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View All Blogs</Button>
     </div>
   </section>
   
-  </main>
+</main>
 <style>
     #logo {
         opacity: 0;
